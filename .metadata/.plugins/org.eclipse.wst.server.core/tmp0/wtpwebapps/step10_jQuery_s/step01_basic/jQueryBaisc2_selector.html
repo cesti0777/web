@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+  <title> jQuer selector </title>
+ </head>
+
+ <body>
+ 
+	<h3>* jQuery selector[선택자]를 이용해서 동적으로 화면 변경하는 문법 학습 *</h3>
+
+	<br><hr><br>
+
+	<h5>tag</h5>
+	<hr><br>
+	
+	<h4 id="one">id 속성</h4>
+	<hr><br>
+	
+	<h3 class="two">class 속성</h3>
+
+
+	<!-- 
+		jQuery의 함수에 선택자(selector) 적용 문법 
+			1. val() - value
+			2. text() - innerText
+			3. html() - innerHTML
+			* tag별 지원 속성 다름
+				- text로 확인 또는 w3schools에서 검색
+	-->
+	<script src="scripts/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("h5").click(function(){
+				$("h5").html("<font color='red'>tag명으로 데이터값 변경</font>");
+			});
+			
+			$("#one").click(function(){
+				$("#one").html("<font color='green'>id 속성값으로 데이터값 변경</font>");
+			});
+			
+			$(".two").click(function(){
+				$(".two").html("<font color='blue'>class 속성값으로 데이터값 변경</font>");
+			});
+		});
+	</script>
+ </body>
+</html>

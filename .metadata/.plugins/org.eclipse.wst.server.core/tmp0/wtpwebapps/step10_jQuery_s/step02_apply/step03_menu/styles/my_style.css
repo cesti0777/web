@@ -1,0 +1,21 @@
+
+.menu_wrapper{
+    width:90%;
+    border: 1px solid gray;
+	padding-left: 30px;
+}
+ 
+.menu_list{
+    padding-bottom: 15px;
+}
+
+.menu_list li{
+    display: inline;   
+    padding-left: 15px;
+}
+	  
+ /* 채식 주의자 버튼 클릭으로 인한 화면 편집 후 my_scripts.js 의 설정으로 이미지 변경되기 
+ */
+.veg_leaf{
+    list-style-image:url('../images/leaf.png');
+}	

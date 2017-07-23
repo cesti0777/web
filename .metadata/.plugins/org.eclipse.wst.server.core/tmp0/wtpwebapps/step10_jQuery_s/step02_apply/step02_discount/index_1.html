@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>이벤트 및 논리적인 사고력 키우기</title> 
+		<link href="styles/my_style.css" rel="stylesheet">
+	</head> 
+
+	<body>
+		<h3>
+			jQuery로 클릭 이벤트 효과주기 <br>
+			step01 - 실행시 단점[모든 div(사진이 아닌 영역 포함) 클릭시 무작위별 할인 정보 출력]
+		</h3>
+		1. id속성은 중복 불가한 고유한 별칭, js에서 주로 사용되는 속성<br>
+		2. name속성은 servlet&jsp에서 웹 쿼리 스트링값 획득시 사용되는 속성<br>
+		3. class속성  :css에서 주로 사용되는 ui를 위한 설정, 다수의 tag에 동일한 이름의 class 설정 가능<br>
+		<hr><br>
+
+		<div id="header">
+			<h2>할인을 위한 점핑</h2>
+		</div>
+
+		<div id="main">
+			<div class="guess_box"><img src="images/jump1.jpg"/></div>
+			<div class="guess_box"><img src="images/jump2.jpg"/></div>
+			<div class="guess_box"><img src="images/jump3.jpg"/></div>
+			<div class="guess_box"><img src="images/jump4.jpg"/></div>
+		</div>
+		
+		<script src="scripts/jquery-3.1.1.js"></script>
+		<script>
+		
+			$(document).ready(function() {
+				$(".guess_box").click( function() {//모든 div를 클릭하면 다음 로직으로 처리
+					$(".guess_box p").remove();	//div 하위에 p라는 후손(자식, 자손) 삭제
+					
+					//js 자체적으로 지원하는 API
+					var discount = Math.floor((Math.random()*5) + 5);//할인률 연산
+					
+					/* p라는 tag와 할인율 데이터 조합해서
+						div중에 이벤트가 발생된 tag(객체)에 하위에 p추가
+					*/
+					var discount_msg = "<p>당첨된 당신의 할인율 - "+discount+"%</p>";
+					
+					/* this키워드
+						- 다수의 tag들 중에 client가 action을 취한 event 발생된 tag를 의미
+						- 이 로직이 실행되는 시점은? 모든 div를 클릭시
+								따라서 현 this는 클린된 div의미
+								append() : 해당 tag의 끝 부분에 parameter 반영
+												html tag 형태의 문자열은 tag로 처리
+					*/
+					$(this).append(discount_msg);
+								
+					/* 이벤트를 무효화 하기
+						bind <-> unbind
+					*/ 
+					$(".guess_box").unbind();
+				});
+			});
+			
+		</script>
+
+	</body>
+</html>

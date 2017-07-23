@@ -152,7 +152,7 @@
       <Context docBase="D:\0.swStudy\4.web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\0.swStudy\4.web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Coin" path="/coINsight" reloadable="true" source="org.eclipse.jst.jee.server:Coin">
 	
 	 <Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" maxActive="25" maxIdle="10" maxWait="-1" name="jdbc/myoracle" password="tiger" type="javax.sql.DataSource" url="jdbc:oracle:thin:@127.0.0.1:1521:XE" username="scott"/> 
-</Context></Host>
+</Context><Context docBase="D:\0.swStudy\4.web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\step05_JSP" path="/step05_JSP" reloadable="true" source="org.eclipse.jst.jee.server:step05_JSP"/><Context docBase="D:\0.swStudy\4.web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\step09_JS" path="/step09_JS" reloadable="true" source="org.eclipse.jst.jee.server:step09_JS"/><Context docBase="D:\0.swStudy\4.web\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\step10_jQuery_s" path="/step10_jQuery_s" reloadable="true" source="org.eclipse.jst.jee.server:step10_jQuery_s"/></Host>
     </Engine>
   </Service>
 </Server>

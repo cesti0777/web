@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>jQuery01.html</title>
+</head>
+<body>
+	<h2>jQuery 학습</h2>
+	<br><hr><br>
+	
+	1. 개발 환경 : jQuery 라이브러리(유용한 js 함수 모음) 다운로드 또는 url로 include 하기<br>
+		- http://jquery.org<br>
+	2. jQuery 문법에 맞게 개발하기<br>
+	3. test 로직<br>
+		- 버튼 만들고, 버튼 클릭하면, text form(text field)에 이름 출력하기<br>
+	
+	<br><hr><br>
+	<!-- 버튼 클릭(onclick)시에 text field에 데이터 출력(value속성에 값 대입)
+		버튼이 언제 클릭되나? 정확한 시점 확인 불가, 단지 버튼 클릭될때 로직처리는 필수 -->
+	<button>클릭</button><input type="text" id="dataView">
+
+	<img id="view" width="30%" height="40%"/>
+
+
+	<!-- 외부 js 라이브리들을 사용할 수 있게 소스에 include하는 코드,
+			주의 사항 start tag와 end tag를 반드시 분리
+			왜? 분리하지 않을 경우 인식 못하는 브라우져가 존재 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){//문서 </body> tag까지 실행 직후에 준비함을 의미의 선언구
+			$("button").click(function(){//모든 button tag가 click되는 시점에 실행
+				$("#dataView").val("data"),//id값이 dataView tag의 value속성에 data값 반영
+				$("img").attr({src:"img/cherries.jpg"});//모든 img tag의 속성에 이미지 반영
+			});//button click시 수행될 로직 종료
+		});//종료
+		/*
+		<button onclick="함수">클릭</button>
+		function 함수(){
+			document.getElemtntById("dataView").value = "data";
+			document.getElementsByTagName("img")[0].src = "img/cherries.jpg";
+		}
+		*/
+
+	</script>
+	
+</body>
+</html>
+
+<!-- 
+주요 함수
+1. value속성 : val()
+2. innerHTML : html()
+3. innerText : text()
+ -->
+
+
+
+
+
+
+
+
+

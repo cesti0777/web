@@ -2,7 +2,7 @@
 2. js가 적용 가능한 파일
 	1. html에 개발(*.html or *.htm)
 	2. jsp(asp, php) 내에서 개발(*.jsp)
-	3. java script로만 갭라 가능(*.js)
+	3. java script로만 개발 가능(*.js)
 	
 3. 필요성
 	1. 브라우저에 동적인 화면(사용자의 욕구 충족) 구성 요소
@@ -34,7 +34,7 @@
 					- key와 value 구조로 관리되는 데이터 구조
 					- 서버 입장 : json구조는 단순 문자열
 					- client 부라우저 입장
-						: json구조의 단순 문자열 반드시 js 객체로 변환 필수
+						: json구조의 단순 문자열 반드시 json 객체로 변환 필수
 						: key로 value 활용
 							(핵심 : 단순 문자열을 JSON 객체로 변환하는 함수)
 					

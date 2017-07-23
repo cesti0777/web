@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>js3Fun.html</title>
+
+	<script type="text/javascript">
+		function m1(){
+			document.write(1 + "<br>");
+		}
+		function m2(v){
+			document.write(2 + "<br>");
+		}
+		function m3(v1, v2){
+			document.write(3 + "" + v1 + "" + v2 + "<br>");
+		}
+	</script>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		// 모든 문법 정상 단, 데이터가 없을때 undefined로 처리됨
+		m1();//1
+		m1(2);//1
+		m2();//2
+		m2(1, 2, 3);//2
+		m3();//3undefinedundefined
+		m3(1);//31undefined
+		m3("s", "m");//3sm
+		m3("s", "m", "e");//3sm
+	</script>
+
+</body>
+</html>
