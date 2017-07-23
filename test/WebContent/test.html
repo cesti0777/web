@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+		<script src="scripts/jquery-3.1.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").click(function(){
+					$.ajax({
+						url: "http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=728",
+						$("#btn1").click(function(){
+						    $.get("http://www.nlotto.co.kr/common.do?method=getLottoNumber&drwNo=728", function(data, status){
+						        alert("Data: " + data + "\nStatus: " + status);
+						    });
+						});
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<button id="btn1">클릭</button>
+		<p id="data">
+		<form action="asdf." method="get">
+			<input type="hidden" name="a1">
+			<input type="submit">
+		</form>
+		
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>pageMove</title>
+</head>
+<body>
+
+	<h1>html/servlet/jsp 간의 page이동 기술</h1>
+	
+	<br>
+	1. html 링크 : get방식, web query 적용 가능<br>
+	1-1. <a href="http://www.naver.com">네이버</a><br>
+	1-2. <a href="http://www.naver.com" target="blank">네이버 새 tab</a><br>
+	1-3. <a href="dataview1">단순 servlet 요청</a><br>
+	1-4. <a href="dataview1?data=kdata">servlet으로 데이터도 전송하면서 요청</a><br>
+	
+	<br><hr color="blue" size="2"><br>
+	
+	2. html의 form button
+	2-1. 단순 form tag의 submit<br>
+	<form action="dataview1" method="post">
+		<input type="text" size="100" name="data" value="기본값">
+		<input type="submit" value="서버요청">
+	</form>
+	2-2. form tag에 hidden tag 및 submit로  값을 전송<br>
+	<form action="dataview1" method="post">
+		<input type="hidden" size="100" name="data" value="은닉데이터">
+		<input type="submit" value="서버요청">
+	</form>
+	
+	
+	<br><hr color="blue" size="2"><br>
+	
+	3. html의 일반 버튼 : java script로 버튼 tag에 기능 적용<br>
+	<button onclick="location.href='dataview1?data=value'">일반 버튼</button>
+	
+	<br><hr color="blue" size="2"><br>
+	
+</body>
+</html>

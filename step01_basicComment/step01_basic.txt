@@ -1,0 +1,128 @@
+step01_basic
+
+1. 용 어
+	1. server 지칭 용어
+		web server
+		web application server[WAS]
+		server
+		web container
+		container
+		servlet engine
+	
+	2. server : service를 하는 주체
+	   client : service를 받는 주체 
+
+	3. web query string
+		- client가 서버에 전송하는 데이터 구조
+			key1=value&key2=value2..
+			
+2. web 통신 규약
+	1. http 프로토콜
+	2. w3c에서 관리하는 스펙
+	
+3. servlet & jsp 기반의 개발 스펙
+	1. http 프로토콜 기반
+	2. 개발의 장점
+		- http 프로토콜 고려 및 처리 로직은 이미 HttpServlet 제공
+		- 상속 받아 개인 처리 로직에만 집중해서 개발 
+		- 개발이 쉽다
+4. 필요 장비
+	1. web server
+		* 서비스 로직 구현된 web application
+	2. 브라우저 		
+		
+
+5. 실행을 위한(서비스) 필수 조건
+	- 서버는 24시간 365일 늘 실행중이어야 함	
+	
+6. url 
+	- http://ip:port/project명/../파일명
+	1. servlet
+		- 확장자 절대 적용 불가 
+		http://ip:port/project명/../파일명
+	2. html/jsp	
+		- 확장자 필수
+		http://ip:port/project명/../파일명.html
+	
+	
+7. API 학습
+	1. 스펙 제시 : (구)sun
+	2. doGet() 개발 : 실제 로직 개발은 서비스 구현하는 개발자
+	3. doGet() 호출 : 웹서버, 
+					호출 시점은 client가 url로 해당 servlet 요청시
+					web container(url)가 요청 감지 후 메소드 호출
+					
+	*** sun/개발자/web server의 벤더사들 스펙 일치
+	
+
+8. http 통신 방법
+	1. http://w3.org
+	2. 요청 방식
+		1. get방식
+			- 요청시 client가 입력하는 데이터 url에 오픈되는 구조
+			- 즐겨찾기용 요청 처리 방식
+			
+		2. post방식 	
+			- 요청시 client가 입력하는 데이터 url에 오픈되지 않는 은닉 구조로 요청
+			- 보안을 고려한 처리 방식
+	
+	
+9. servlet 필수 설정 정보
+	* 주의사항 : 이클립스는 servlet 생성시 자동 설정 정보 생성
+			     간혹 설정 정보가 생성이 안 될 경우 발생
+			     해결책 : 개발자가 직접 xml 문서 편집 
+			 
+	1. web.xml
+	2. 보안을 고려한 url값 수정
+	<servlet>
+    	<servlet-name>HelloServlet</servlet-name>
+    	<servlet-class>실제구현한 서블릿 클래스명</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>url과 실제 서블릿 매핑하는 별칭</servlet-name>
+	    <url-pattern>/클라이언트가 요청하는 url</url-pattern>
+	</servlet-mapping>	
+	
+10. 주요 API
+	HttpServlet 
+		- http 프로토콜 기반의 로직 지원하는 유요한 클래스
+		- 상속받는 경우 http servlet
+		- doGet
+ 		- doPost
+		
+	HttpServletRequest
+		- http프로토콜 기반의 client의 요청 정보 보유
+		- 접속한 client만의 ip/브라우저 정보/client 의 데이터값...
+		- getParameter/setAttribute/getAttribute
+		- getRequestDispacher
+		
+	HttpServletResponse
+		- 접속한 client에게만 응답해주는 객체
+		- setContentType
+		- getWriter
+		- sendRedirect
+		
+	RequestDispacher
+		- servlet간의 화면이동 
+		- forward
+	
+11. A라는 Servlet(인증처리..)
+	A Servlet객체 : request객체 : response객체수 : client수
+	= 1 : 100 : 100  : 100
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		

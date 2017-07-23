@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+ 
+	로그인 화면 구성<br>
+
+	1. 단순 servlet과 연동 test<br>	
+	<form action="kdata" method="get">
+		id <input type="text"><br>
+		pw <input type="password"><br>
+		
+		<!-- submit 버튼이 포함된 form tag에 입력된 
+		데이터값 모두를 지정된 servlet으로 전송 -->
+		<input type="submit" value="로그인">
+		<input type="reset" value="취소">
+	</form>
+
+	<br><hr><br>
+	2. 로그인 인증  test<br>	
+	<form action="kdata2" method="post">
+	
+		id <input type="text" name="idValue"><br>
+		pw <input type="password" name="pwValue"><br>
+		
+		<input type="submit" value="로그인">
+		<input type="reset" value="취소">
+	</form>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+{
+	"status": "0000",
+	"data": {
+		"BTC": {
+			"opening_price": "2288000",
+			"closing_price": "2272000",
+			"min_price": "1800000",
+			"max_price": "2387000",
+			"average_price": "2151820.1570",
+			"units_traded": "23197.58390296",
+			"volume_1day": "23197.58390296",
+			"volume_7day": "105116.78147075",
+			"buy_price": "2272000",
+			"sell_price": "2273000"
+		},
+		"ETH": {
+			"opening_price": "185150",
+			"closing_price": "188250",
+			"min_price": "132150",
+			"max_price": "203000",
+			"average_price": "172752.4170",
+			"units_traded": "1581632.3272829382984068",
+			"volume_1day": "1581632.3272829382984068",
+			"volume_7day": "4932716.417417884044608870",
+			"buy_price": "188250",
+			"sell_price": "188350"
+		},
+		"DASH": {
+			"opening_price": "159950",
+			"closing_price": "157200",
+			"min_price": "110450",
+			"max_price": "168950",
+			"average_price": "146793.8266",
+			"units_traded": "43762.45183498",
+			"volume_1day": "43762.45183498",
+			"volume_7day": "185288.649476690000000000",
+			"buy_price": "157200",
+			"sell_price": "157800"
+		},
+		"LTC": {
+			"opening_price": "45060",
+			"closing_price": "46640",
+			"min_price": "34100",
+			"max_price": "50700",
+			"average_price": "43782.7269",
+			"units_traded": "1808915.06594256",
+			"volume_1day": "1808915.06594256",
+			"volume_7day": "7520665.535745690000000000",
+			"buy_price": "46570",
+			"sell_price": "46640"
+		},
+		"ETC": {
+			"opening_price": "16815",
+			"closing_price": "16565",
+			"min_price": "12000",
+			"max_price": "18000",
+			"average_price": "15867.1401",
+			"units_traded": "7660494.922640411135138",
+			"volume_1day": "7660494.922640411135138",
+			"volume_7day": "38244416.477530174539832000",
+			"buy_price": "16565",
+			"sell_price": "16585"
+		},
+		"XRP": {
+			"opening_price": "191",
+			"closing_price": "176",
+			"min_price": "126",
+			"max_price": "198",
+			"average_price": "165.7955",
+			"units_traded": "890268847.450303",
+			"volume_1day": "890268847.450303",
+			"volume_7day": "2597062472.566567000000000000",
+			"buy_price": "176",
+			"sell_price": "177"
+		},
+		"date": "1500269567420"
+	}
+}

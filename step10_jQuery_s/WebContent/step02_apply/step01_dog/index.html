@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery로 이미지에 효과주기</title>
+		<!-- css 파일을 적용하는 html tag -->
+		<link rel="stylesheet" type="text/css" href="styles/my_style.css">
+		
+	</head>
+	<body>
+		<h3>
+			jQuery로 이미지에 효과주기<br>
+			페이드[fade] - 이미지가 보이지 않다가 천천히 나타나게 하고 싶은 경우
+		</h3>
+		<hr><br>
+
+		<div id="clickMe">클릭후 애완견 보기</div>
+
+		<!-- css파일에 display: none; 설정되어 있음 -->
+		<div id="picframe">
+			<img src="images/dog.jpg">
+		</div>
+		<!-- ??? slideToogle 효과 주기 : slideToggle()
+			id가 clickMe인 div 클릭시에 이미지가 보이게 해 주셔야 합니다.
+			발생되는 이벤트 - click
+		-->
+		<script src="scripts/jquery-3.1.1.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#clickMe").click(function(){
+					//$("#picframe").slideToggle("fast");
+					$("#picframe").slideToggle("slow");
+				});
+			});
+		</script>
+	</body>
+</html>
+
+
+
+
+
+

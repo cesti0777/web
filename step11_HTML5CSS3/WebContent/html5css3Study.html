@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>HTML5/CSS3 학습</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body>
+
+<div class="w3-container" >
+
+  <div style="margin-left: 15%; margin-right: 15%; ">
+  	
+  	<div>
+	  <div class="w3-panel w3-card-4"><p>HTML5 / CSS3 / jQUery  - http://www.w3schools.com 학습 사이트 참조</p></div>
+	  
+	
+	  <div class="w3-card-4" style="width:30% ;display: inline-block; margin-right: 3%">
+	    <header class="w3-container w3-light-grey">
+	      <h3>HTML5</h3>
+	    </header>
+	    <div class="w3-container">
+	      <p>HTML5 = HTML + CSS + JavaScript</p>
+	      <hr>
+	      <img src="img/p1.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+	      <p>플러그인과 엑티브엑스 컨트롤의 문제들로 인해 웹은 순수한 HTML 만으로는 구현이 어려워 많은 외부기술에 의존하게 되었고 
+	      	  플러그인이나 엑티브엑스 컨트롤 없이 순수한 HTML만을 이용하여 구현하길 원했던 WHATWG에 의해 개발이 시작되어 2007년 W3C와 공동 제정한 HTML의 최신표준</p><br>
+	    </div>
+	    <button class="w3-button w3-block w3-dark-grey" onclick="ajaxUser('html5.jsp')">학습하기</button>
+	  </div>
+	  
+	  
+	  
+	  <div class="w3-card-4" style="width:30% ;display: inline-block; margin-right: 3%">
+	    <header class="w3-container w3-light-grey">
+	      <h3>CSS3</h3>
+	    </header>
+	    <div class="w3-container">
+	      <p>Cascading Style Sheet</p>
+	      <hr>
+	      <img src="img/p1.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+	      <p>마크업 언어가 웹사이트의 몸체를 담당한다면 CSS는 옷과 액세서리 같은 몸체를 꾸미는 역할을 담당, HTML 구조는 그대로 두고 CSS 파일만 변경해도 전혀 다른 웹사이트처럼 꾸밀 수 있음</p><br>
+	    </div>
+	    <button class="w3-button w3-block w3-dark-grey" onclick="ajaxUser('css3.jsp')">학습하기</button>
+	  </div>
+	  
+	  <div class="w3-card-4" style="width:30% ;display: inline-block;">
+	    <header class="w3-container w3-light-grey">
+	      <h3>jQuery</h3>
+	    </header>
+	    <div class="w3-container">
+	      <p>오픈 소스 라이브러리</p>
+	      <hr>
+	      <img src="img/p1.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+	      <p>모든 브라우저에서 동작하는 오픈 소스 라이브러리 다음 기능을 쉽게 처리하기 위해 제작<br>
+				① HTML/DOM manipulation<br>
+				② CSS manipulation<br>
+				③ HTML event methods<br>
+				④ Effects and animations<br>
+				⑤ AJAX<br>
+				⑥ Utilities</p><br>
+	    </div>
+	    <button class="w3-button w3-block w3-dark-grey">학습하기</button>
+	  </div>
+	
+</div>
+
+<br><br><br>
+	      
+	<div id="viewData"></div>
+	 
+</div>
+</div>
+
+<script type="text/javascript" src="scripts/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		function ajaxUser(requestCommand){
+			$.ajax({
+				url: requestCommand,
+				type: "post",
+				dataType: "html",
+				success : function(responseData){
+					$("#viewData").html(responseData);
+				}
+			});
+		}
+	</script>
+</body>
+</html>

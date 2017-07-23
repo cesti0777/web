@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>js4Dynamic.html</title>
+		
+	</head>
+	<body>
+		두개의 input tag간의 데이터 호환<br>
+		
+		<input type="text" id="one" value="말조심" onclick="myFun()"><br>
+		<input type="text" id="two"><br>
+		
+		<script type="text/javascript">
+			function myFun(){
+				console.log("myFun()");//js 디버깅용 함수
+				/* one이라는 id의 tag의 value속상값 read해서 two의 value로 대입*/
+				document.getElementById("two").value	
+				= document.getElementById("one").value;
+				/* one tag의 value 지우기*/
+				document.getElementById("one").value = null;
+			}
+		</script>
+	</body>
+</html>

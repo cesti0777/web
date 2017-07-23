@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+	<!-- 
+	1. DB 동시 접속자 수 제한 하는 Connection Pool기법의 설정
+	2. 설정 정보 
+		- DB 접속 정보, 동시 접속자 수(maxActive="20")
+		  접속자가 없다 하더라도 늘 대기하고 있는 Connection 수(maxIdle="10")
+		  20명 초과한 client가 Connection 객체를 획득하기 위한 대기 시간 설정 (maxWait="-1")
+		  -1이란 대기시간 없다와 같다
+	3. 장점
+		- DB system 다운 방지
+	
+	4. 설정은 벤더사별 다.르.다
+	5. 주요 API
+		1. javax.sql.DataSource
+			- 설정 정보에 맞게 Connection 수를 관리 및 사용 가능하게 제공하는 자바 객체
+	6. 필수 구분자
+		- 자원의 별칭
+		- name="jdbc/myoracle"
+	 -->
+	
+	 <Resource 
+	 		  name="jdbc/myoracle" auth="Container"
+              type="javax.sql.DataSource" 
+              driverClassName="oracle.jdbc.OracleDriver"
+              url="jdbc:oracle:thin:@127.0.0.1:1521:XE"
+              username="scott" password="tiger" 
+              maxActive="20" maxIdle="10"
+              maxWait="-1"/> 
+              
+     <Resource 
+	 		  name="jdbc/mysql" auth="Container"
+              type="javax.sql.DataSource" 
+              driverClassName="mysql..."
+              url="..."
+              username="..." password="..." 
+              maxActive="20" maxIdle="10"
+              maxWait="-1"/> 
+
+
+</Context>

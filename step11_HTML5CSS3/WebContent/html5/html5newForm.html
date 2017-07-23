@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+    <title>HTML5 Basic</title>
+</head>
+<body>
+	<h2>HTML5의 새로운 form 양식</h2>
+    <form action="#">
+       1. color 선택 가능 :  <input type="color" /><br />
+       2. date 선택 가능: <input type="date" /><br />      
+       3. 시간 포함 date 선택 가능 :  <input type="datetime-local" /><br />
+       4. email 양식 유효성 검증 :  <input type="email" /><br />
+       5. 년 월 선택 가능 : <input type="month" /><br />
+       6. 숫자 이외 입력 불가 :  <input type="number" /><br />
+       7. 특정 범위값 표현 및 입력시 사용 : 1<input type="range" min="1" max="5" />5<br />       
+       8. 시간 형식 표현 : <input type="time" /><br />
+       9. url 양식 표현 : <input type="url" /><br />
+       10. 해당 주수 표현 : <input type="week" />
+		<br>
+		<input type="submit" value="확인" />
+    </form> 
+
+	<br><hr><br>
+	<h2>속성 학습</h2>
+	* autocomplete="on|off" 로  자동  완성 기능을 설정<br>
+	* novalidate 속성 추가로 입력 양식의 유효성을 검증하지 않게 설정<br>
+	<hr>
+      <form action="#"  autocomplete="on" novalidate>
+	   1. color 선택 가능 :  <input type="color" value="#ff0000" /><br />
+	   2. date 선택 가능: <input type="date" /><br />      
+	   3. 시간 포함 date 선택 가능 :  <input type="datetime-local" /><br />
+	   4. email 양식 유효성 검증 :  <input type="email" /><br />
+	   5. 년 월 선택 가능 : <input type="month" /><br />
+	   6. 숫자 이외 입력 불가 :  <input type="number" /><br />
+	   7. 특정 범위값 표현 및 입력시 사용 : 1<input type="range" min="1" max="5" />5<br />   
+	   8. 시간 형식 표현 : <input type="time" /><br />
+	   9. url 양식 표현 : <input type="url" /><br />
+	   10. 해당 주수 표현 : <input type="week" />
+		<br>
+		<input type="submit" value="확인" />
+    </form>
+
+</body>
+</html>
